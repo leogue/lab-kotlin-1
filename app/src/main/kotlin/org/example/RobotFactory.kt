@@ -4,7 +4,7 @@ class RobotFactory {
 
     companion object {
 
-        private fun _generateRandomRobot(): Robot {
+        private fun generateRandomRobot(): Robot {
             val directions = Direction.entries
             val direction = directions.random()
             val x = (-100..100).random()
@@ -12,7 +12,7 @@ class RobotFactory {
             return Robot(direction, x, y)
         }
 
-        private fun _generateRandomCommand(): String {
+        private fun generateRandomCommand(): String {
             val commands = listOf("L", "R", "A")
             return commands.random()
         }
@@ -22,8 +22,8 @@ class RobotFactory {
             val numberOfRobots = 25
 
             repeat(numberOfRobots) {
-                val robot = _generateRandomRobot()
-                robot.handleCommand(_generateRandomCommand())
+                val robot = generateRandomRobot()
+                robot.handleCommand(generateRandomCommand())
                 robots.add(robot)
             }
 

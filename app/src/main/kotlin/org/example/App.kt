@@ -9,7 +9,6 @@ fun main() {
 
     val robots = RobotFactory.randomizedRobot()
 
-    // Sorted robots, followed by the list sorted by each robot’s directio with lambda
     val sortedRobots = robots.sortedBy { robot -> robot.getDirection().toString() }
 
     println("\n\nSorted robots:")
